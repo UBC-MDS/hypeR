@@ -1,1 +1,3 @@
 # hypeR
+
+# Authors
