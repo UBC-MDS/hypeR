@@ -15,16 +15,29 @@ For maintainers, this means using the feature branch workflow:
 
 | Action | Commands |
 | --- | --- |
-| From master branch | `git checkout master` |
+| From master branch, | `git checkout master` |
 | Get updates | `git pull` |
-| Create a new feature | `git checkout -b new-feature` |
+| Create a new feature branch | `git checkout -b new-feature` |
 | Make edits | |
 | Stage files for commit | `git add <files>` |
 | Commit | `git commit -m "Commit message"` |
 | Push the branch (with its changes)| `git push -u origin new-feature` |
 
-Sometimes, we want to make small related changes / corrections to a file that is associated with a branch. In this case, we can make changes to the branch without having to create a new one.
+Sometimes, we want to make small related changes / corrections to a file that is associated with a branch. In this case, we can make changes to the branch without having to create a new one. To make additional changes to the branch, we may update it
 
+| Action | Commands |
+| --- | --- |
+| Check out the feature | `git checkout feature-branch` |
+| Pull potential updates | `git pull` |
+| Make edits | |
+| Stage files for commit | `git add <files>` |
+| Commit | `git commit -m "Commit message"` |
+| Push the branch (with its changes)| `git push` |
+
+To incorporate the changes to the master branch, make a pull request from the branch to the master on Github and assign another maintainer to review the code.
 
 ## Developers
 Ivan Despot, Siobhan Mccarter, Jomar Anthony Sastrillo
+
+## Bibliography
+Workflow adapted from [https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow).
