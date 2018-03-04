@@ -9,6 +9,11 @@ conf_int <- function(data){
   # Returns: interval: a 2-element 1D array indicating the start and end of the 95% confidence interval.
 }
 
+# Check that output is an array
+test_that("output data type?", {
+  expect_true(is.array(conf_int(data)))
+})
+
 # Checking to ensure that inputs are not strings
 test_that("data type?", {
   expect_error(conf_int("this is a string!!"), "Invalid data type")
