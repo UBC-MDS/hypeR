@@ -11,6 +11,7 @@ conf_int <- function(data){
 
 # Check that output is an array
 test_that("output data type?", {
+  data <- c(1, 2, 3, 4)
   expect_true(is.array(conf_int(data)))
 })
 
