@@ -3,7 +3,15 @@ conf_int <- function (data){
 
   # Arguments: data: a 1D array of a list of numbers. Non-numerical values result in an error.
 
-  # Returns: interval: a 2-element 1D array indicating the start and end of the 95% confidence interval.
+  # Returns: interval: a 2-element 1D vector indicating the start and end of the 95% confidence interval.
+
+  if (is.logical(typeof(data)) == TRUE){
+    stop("Invalid data type")
+  }
+
+  if (length(data) == NA){
+    stop("Empty array")
+  }
 
   mean <- mean(data)
 
@@ -15,7 +23,7 @@ conf_int <- function (data){
 
   upper <- round((mean + (1.96*(sd/sqrt(n)))),2)
 
-  conf <- (c(lower, upper))
+  conf <- array(c(lower, upper))
 
   return(conf)
 

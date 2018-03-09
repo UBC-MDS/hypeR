@@ -3,7 +3,7 @@ context("conf_int test")
 
 # Check that output is an array
 test_that("output data type?", {
-  data <- c(1, 2, 3, 4)
+  data <- array(c(1, 2, 3, 4, 5))
   expect_true(is.array(conf_int(data)))
 })
 
