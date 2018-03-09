@@ -3,8 +3,8 @@ context("conf_int test")
 
 # Check that output is an array
 test_that("output data type?", {
-  data <- array(c(1, 2, 3, 4, 5))
-  expect_true(is.array(conf_int(data)))
+  data <- c(1, 2, 3, 4, 5)
+  expect_true(is.vector(conf_int(data)))
 })
 
 # Checking to ensure that inputs are not strings
@@ -19,19 +19,19 @@ test_that("data type?", {
 
 # Checking to ensure that there are no NA values
 test_that("NA values?", {
-  test <- array(c(1,2,3,4,NA))
+  test <- c(1,2,3,4,NA)
   expect_error(conf_int(test), "NA values present")
 })
 
 # Checking to ensure that the input array is not empty
 test_that("length greater than 0", {
-  length_test <- array()
+  length_test <- vector()
   expect_error(conf_int(length_test), "Empty array")
 })
 
 # Checking to ensure that the math is correct
 test_that("math is correct",{
-  data_test <- array(c(1,2,3,4,5))
-  output <- array(c(1.61, 4.38))
+  data_test <- c(1,2,3,4,5)
+  output <- c(1.61, 4.38)
   expect_equal(conf_int(data_test), output)
 })
