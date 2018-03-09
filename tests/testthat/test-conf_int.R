@@ -1,7 +1,7 @@
 library(testthat)
 context("conf_int test")
 
-# Check that output is an array
+# Check that output is a vector
 test_that("output data type?", {
   data <- c(1, 2, 3, 4, 5)
   expect_true(is.vector(conf_int(data)))
@@ -26,12 +26,12 @@ test_that("NA values?", {
 # Checking to ensure that the input array is not empty
 test_that("length greater than 0", {
   length_test <- vector()
-  expect_error(conf_int(length_test), "Empty array")
+  expect_error(conf_int(length_test), "Empty vector")
 })
 
 # Checking to ensure that the math is correct
 test_that("math is correct",{
   data_test <- c(1,2,3,4,5)
-  output <- c(1.61, 4.38)
+  output <- c(1.61, 4.39)
   expect_equal(conf_int(data_test), output)
 })

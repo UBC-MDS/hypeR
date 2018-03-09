@@ -5,8 +5,13 @@ conf_int <- function (data){
 
   # Returns: interval: a 2-element 1D vector indicating the start and end of the 95% confidence interval.
 
+  # Check if input is empty
+  if (length(data) == 0){
+    stop("Empty vector")
+  }
+
   # Check if input is logical
-  if (is.logical(data)){
+  if (any(is.logical(data))){
     stop("Invalid data type")
   }
 
@@ -15,9 +20,9 @@ conf_int <- function (data){
     stop("Invalid data type")
   }
 
-  # Check if input is empty
-  if (length(data) == 0){
-    stop("Empty vector")
+  # Check if input has NA values
+  if (sum(is.na(data)) > 0){
+    stop("NA values present")
   }
 
   mean <- mean(data)
@@ -35,11 +40,3 @@ conf_int <- function (data){
   return(conf)
 
 }
-
-
-
-#if np.isnan(data).any() == True:
-  #return ValueError("Input cannot contain NA values")
-
-
-
