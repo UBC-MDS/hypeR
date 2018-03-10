@@ -1,7 +1,7 @@
 hyp_test <- function(data, mean_0, alpha){
-# This function prints the p-value and a recommendation for 
+# This function prints the p-value and a recommendation for
 #rejecting or accepting the null hypothesis.
-  
+
 # Arguments: data: a 1-dimensional array. Non-numerical values result in an error
 #            mean_0: the mean (as a number) of the population under the null hypothesis. Default: 0.
 #            alpha: the threshold for Type I errors as an float.
@@ -22,12 +22,13 @@ hyp_test <- function(data, mean_0, alpha){
 
   if(test_statistic <= critical_value)
     {print("The test statistic is less than the critial value. Therefore, you should reject the null hypothesis.")}
-  
+
   else
-    {print("The test statistic is greater than the critial value. Therefore, you should accept the null hypothesis."}
-}
+    {print("The test statistic is greater than the critial value. Therefore, you should accept the null hypothesis.")}
+
   print("The p-value is:")
   print(p_value)
-  
+}
 
 # Source: https://www.r-bloggers.com/hypothesis-testing-on-normally-distributed-data-in-r/
+

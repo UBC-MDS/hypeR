@@ -1,4 +1,4 @@
 library(testthat)
-library(hypeRdev)
+library(hypeR)
 
-test_check("hypeRdev")
+test_check("hypeR")
