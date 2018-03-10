@@ -46,15 +46,22 @@ This project is part of the DSCI 524 Collaborative Software Development Course f
   * Returns:
     * `t`: the t-statistic as a number
 
-# Installation and Execution
+# Installation / Uninstallation and Execution
 
 To install this package, run the following command in the console for RStudio:
 
-`devtools::install_github("hypeR")`
+`devtools::install_github("UBC-MDS/hypeR")`
 
-To run the tests for this package, run the following command in the Rstudio console:
+To perform a clean removal of the packages, run
 
-`run devtools::test()`
+`remove.packages('hypeR')`
+
+# Running Tests
+To run the tests for this package, download and change directory to the repository.
+Then, in _rstudio_ console:
+
+1. Load the package functions into the environment using `devtools::load_all()`
+2. Run the tests using: `devtools::test()`
 
 
 # Current Environment
