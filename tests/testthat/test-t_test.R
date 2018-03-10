@@ -1,6 +1,4 @@
-library(testthat)
-context("conf_int test")
-
+context("t_test test")
 
 # Test incorrect/unacceptable input data
 # These should raise an error.
@@ -25,8 +23,10 @@ test_that("input data is empty", {
 
 test_that("computation incorrect", {
   data <- c(1, 4, 2, 4)
-  tstat_expected <- 3.666666666666667
+  tstat_expected <- 3.6666666666666661
 
   tol <- 1e-14
-  expect_true( abs(t_test(data)-tstat_expected) < tol )
+
+  tstat_obtained <- t_test(data)
+  expect_true( abs(tstat_obtained-tstat_expected) < tol )
 })
