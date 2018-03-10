@@ -25,9 +25,9 @@ This project is part of the DSCI 524 Collaborative Software Development Course f
 
   * Computes the confidence interval of the mean from a population.
   * Arguments:
-    * `data`: a 1-dimensional R array of a list of numbers. Non-numerical values result in an error.
+    * `data`: a vector of numbers. Non-numerical values result in an error.
   * Returns:
-    *  `interval`: a 2 element array indicating the start and end of the 95% confidence interval.
+    *  `interval`: a 2 element vector indicating the start and end of the 95% confidence interval.
 
 * `hyp_test`
   * Prints the t-statistic, p-value and a recommendation for rejecting or accepting the null hypothesis.
