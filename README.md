@@ -46,11 +46,23 @@ This project is part of the DSCI 524 Collaborative Software Development Course f
   * Returns:
     * `t`: the t-statistic as a number
 
+# Vignettes
+
+To see an example of how to use this package run the vignette:
+
+```{r}
+vignette('hypothesis-testing')
+```
+
+
 # Installation / Uninstallation and Execution
 
 To install this package, run the following command in the console for RStudio:
 
 `devtools::install_github("UBC-MDS/hypeR")`
+
+
+Installing the package automatically installs the vignette.
 
 To perform a clean removal of the packages, run
 
