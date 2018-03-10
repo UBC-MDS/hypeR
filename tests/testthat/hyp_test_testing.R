@@ -14,7 +14,8 @@ hyp_test <- function(data, mean_0){}
 
 
 test_that("hyp_test is an integer",{
-expect_type(hyp_test, "integer")
+  expect_error(hyp_test(data = "string"))
+  expect_error(hyp_test(data = TRUE))
   })
 
 test_that("hyp_test input greater than 0", {
