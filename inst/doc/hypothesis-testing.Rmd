@@ -1,0 +1,56 @@
+---
+title: "Hypothesis Testing with hypeR"
+author: "Ivan Despot, Siobhan McCarter, Jomar Sastrillo"
+date: "Revised: `r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Hypothesis Testing with hypeR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r lib}
+devtools::load_all()
+```
+
+Hypothesis testing is one of the core skills of any data scientist. In this package (hypeR) we learn how to obtain simple statistics about data and perform a student's t-test to test a simple hypothesis.
+
+
+## Example of Use
+
+Suppose we are given the heights (in inches) of the following students in a class.
+
+```{r}
+heights <- c(72.6, 57.2, 67.6, 64.8, 59.3, 72.0, 67.2, 61.3, 64.7, 59.6)
+```
+
+We are told that the average height of a student in the class is equal to 70 inches, the average height of all students in a school. We test the null hypothesis that the average height of the class is 70 by performing a t-test.
+
+First, we can obtain the t-statistic for the situation where the heights are given and the mean is assumed to be 70.
+
+```{r}
+t <- t_test(data = heights, mean_0 = 70)
+print(t)
+```
+
+To interpret the t-statistic, we obtain the p-value, the probability of obtaining the above statistic given that (assuming that) the null hypothesis is true^[Devore, J. (n.d.). Probability and statistics for engineering and the sciences.]. If the probability is low (below the usual significance level of 5%), this means it is unlikely that the data was obtained under our null hypothesis, so we reject it. To compute the p-value and make the comparison, use
+
+```{r}
+hyp_test(data = heights, mean_0 = 70, alpha = 0.05)
+```
+
+Finally, we obtain a 95% confidence interval.
+
+```{r}
+conf_int(data = heights)
+```
+
+We see that this confidence interval does not contain the null hypothesis mean of 70. Under the null hypothesis, this would happen about 5% of the time.
+
