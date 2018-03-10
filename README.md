@@ -45,6 +45,16 @@ This project is part of the DSCI 524 Collaborative Software Development Course f
   * Returns:
     * `t`: the t-statistic as a number
 
+# Installation and Execution
+
+To install this package, run the following command in the console for RStudio:
+
+`devtools::install_github("hypeR")`
+
+To run the tests for this package, run the following command in the Rstudio console:
+
+`run devtools::test()`
+
 
 # Current Environment
 
