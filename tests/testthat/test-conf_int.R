@@ -1,5 +1,5 @@
-library(testthat)
 context("conf_int test")
+
 
 # Check that output is a vector
 test_that("output data type?", {
