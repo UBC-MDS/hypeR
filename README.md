@@ -1,5 +1,6 @@
 # hypeR
 
+Status: [![Build Status](https://travis-ci.org/UBC-MDS/hypeR.svg?branch=master)](https://travis-ci.org/UBC-MDS/hypeR)
 
 # Authors
 
