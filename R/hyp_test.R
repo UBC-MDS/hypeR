@@ -1,11 +1,10 @@
 hyp_test <- function(data, mean_0, alpha){
-# This function prints the p-value and a recommendation for
-#rejecting or accepting the null hypothesis.
-
-# Arguments: data: a 1-dimensional array. Non-numerical values result in an error
-#            mean_0: the mean (as a number) of the population under the null hypothesis. Default: 0.
-#            alpha: the threshold for Type I errors as an float.
-# Returns: results: a summary in the form of a string.
+#' This function prints the p-value and a recommendation for rejecting or accepting the null hypothesis.
+#'
+#'           @param data: a 1-dimensional array. Non-numerical values result in an error
+#'           @param mean_0: the mean (as a number) of the population under the null hypothesis. Default: 0.
+#'           @paramalpha: the threshold for Type I errors as an float.
+#' @return results: a summary in the form of a string.
 ##############################################
 
 # determine dof
