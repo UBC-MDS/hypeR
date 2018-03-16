@@ -1,5 +1,5 @@
 conf_int <- function (data){
-  # This function takes in a vector and outputs the 95% confidence interval of the population mean.
+  # This function takes in a vector and outputs the 95% confidence interval of the sample mean.
 
   # Arguments: data: a 1D vector of numbers. Non-numerical values result in an error.
 
