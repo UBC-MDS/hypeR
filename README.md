@@ -17,6 +17,8 @@ The goal of this project is to create a user-friendly and intuitive **hypothesis
 
 Hypothesis testing belongs in the *statistical inference* domain, where an individual is attempting to determine if their results are significant or not. To accomplish this, the individual must generate a **null** and **alternative** hypotheses, and perform a series of statistical tests. That individual can use our package to make their life easier when looking for the elusive "significant" result.
 
+Why is this useful? We aimed to create a package in which you could easily take in a data set and determine whether to accept or reject the null. The package does not require two inputs of data sets. Instead, you can compare your data set to a mean that you choose.  
+
 This project is part of the DSCI 524 Collaborative Software Development Course for the Masters of Data Science program at the University of British Columbia.
 
 

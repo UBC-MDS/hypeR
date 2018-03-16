@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 devtools::load_all()
 ```
 
-Hypothesis testing is one of the core skills of any data scientist. In this package (hypeR) we learn how to obtain simple statistics about data and perform a student's t-test to test a simple hypothesis.
+Hypothesis testing is one of the core skills of any data scientist. In this package (hypeR) we learn how to obtain simple statistics about data and perform a student's t-test to test a simple hypothesis. Why is this useful? We aimed to create a package in which you could easily take in a data set and determine whether to accept or reject the null. The package does not require two inputs of data sets. Instead, you can compare your data set to a mean that you choose.  
 
 
 ## Example of Use
