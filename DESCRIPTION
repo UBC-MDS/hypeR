@@ -9,5 +9,6 @@ Encoding: UTF-8
 LazyData: true
 Suggests: testthat,
     knitr,
-    rmarkdown
+    rmarkdown,
+    roxygen2
 VignetteBuilder: knitr
