@@ -1,12 +1,14 @@
 context("hyp_test test")
 
-test_that("hyp_test is an integer",{
-expect_type(hyp_test, "integer")
+test_that("hyp_test is not a string",{
+expect_error(hyp_test(data = "a random string"))
   })
 
 test_that("hyp_test input greater than 0", {
   data <- c(1, 2, 3, 4)
-  expect_more_than(hyp_test(length(data)), 0)
+  mean_0 <- 1
+  alpha <- 0.5
+  expect_gt(hyp_test(length(data), mean_0, alpha), 0)
 })
 
 test_that("hyp_test input must not have missing values",{
