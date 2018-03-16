@@ -27,7 +27,7 @@ hyp_test <- function(data, mean_0, alpha){
     {print("The test statistic is greater than the critial value. Therefore, you should accept the null hypothesis.")}
 
   print("The p-value is:")
-  print(p_value)
+  return(p_value)
 }
 
 # Source: https://www.r-bloggers.com/hypothesis-testing-on-normally-distributed-data-in-r/
