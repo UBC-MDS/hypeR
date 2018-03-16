@@ -20,11 +20,11 @@ Hypothesis testing belongs in the *statistical inference* domain, where an indiv
 This project is part of the DSCI 524 Collaborative Software Development Course for the Masters of Data Science program at the University of British Columbia.
 
 
-# Function Examples
+# Functions
 
 * `conf_int(data)`
 
-  * Computes the confidence interval of the mean from a population.
+  * Computes the confidence interval of the mean from a sample.
   * Arguments:
     * `data`: a vector of numbers. Non-numerical values result in an error.
   * Returns:
@@ -71,7 +71,7 @@ To perform a clean removal of the packages, run
 
 # Running Tests
 To run the tests for this package, download and change directory to the repository.
-Then, in _rstudio_ console:
+Then, in _Rstudio_ console:
 
 1. Load the package functions into the environment using `devtools::load_all()`
 2. Run the tests using: `devtools::test()`
