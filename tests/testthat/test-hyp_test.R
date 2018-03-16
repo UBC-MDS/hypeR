@@ -17,3 +17,11 @@ test_that("hyp_test input must not have missing values",{
 
 })
 
+test_that("math is correct", {
+  data <- c(1,2,3,4,5)
+  mean_0 <- 2
+  alpha <- 0.05
+  output <- 0.9829453
+  expect_equal(hyp_test(data, mean_0, alpha), output)
+  
+})
