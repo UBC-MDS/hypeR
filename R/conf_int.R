@@ -2,6 +2,7 @@
 #'
 #' @param data A 1D vector of numbers. Non-numerical values result in an error.
 #' @return A 2-element 1D vector indicating the start and end of the 95\% confidence interval.
+#' @export
 conf_int <- function (data){
 
   # Check if input is empty

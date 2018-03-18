@@ -14,7 +14,7 @@ hyp_test(data, mean_0, alpha)
 \item{alpha}{The threshold for Type I errors as an float.}
 }
 \value{
-A summary in the form of a string.
+The p-value
 }
 \description{
 Prints the p-value and a recommendation for rejecting or accepting the null hypothesis.

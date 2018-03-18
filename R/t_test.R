@@ -3,6 +3,7 @@
 #' @param data A 1D vector of numbers. Non-numerical values result in an error.
 #' @param mean_0 A 1D vector of numbers. Non-numerical values result in an error.
 #' @return The t statistic
+#' @export
 t_test <- function(data, mean_0=0){
 
   # Checks if the input is correct
