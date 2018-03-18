@@ -4,6 +4,7 @@
 #' @param mean_0 The mean (as a number) of the population under the null hypothesis. Default: 0.
 #' @param alpha The threshold for Type I errors as an float.
 #' @return The p-value
+#' @export
 hyp_test <- function(data, mean_0, alpha){
 
   # determine dof
@@ -16,11 +17,11 @@ hyp_test <- function(data, mean_0, alpha){
   test_statistic <- t_test(data, mean_0)
 
   # find critial value
-  critical_value <- qt(alpha, df = deg_of_freedom)
+  critical_value <- stats::qt(alpha, df = deg_of_freedom)
 
   # calculate 2-tailed p-value
   test_statistic <- abs(test_statistic)
-  p_value <- 2*pt(abs(test_statistic), df = deg_of_freedom, lower.tail=FALSE)
+  p_value <- 2*stats::pt(abs(test_statistic), df = deg_of_freedom, lower.tail=FALSE)
 
 
   if(test_statistic <= critical_value)
