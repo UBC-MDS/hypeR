@@ -1,6 +1,9 @@
+#' Calculates a t-statistic of the data relative to a mean which may be specified.
+#'
+#' @param data A 1D vector of numbers. Non-numerical values result in an error.
+#' @param mean_0 A 1D vector of numbers. Non-numerical values result in an error.
+#' @return The t statistic
 t_test <- function(data, mean_0=0){
-  #` Calculates a t-statistic of the data relative
-  #` to a mean which may be specified.
 
   # Checks if the input is correct
   err_msg = 'data must be a numpy array.'

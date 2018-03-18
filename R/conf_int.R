@@ -1,9 +1,8 @@
+#' This function takes in a vector and outputs the 95\% confidence interval of the sample mean.
+#'
+#' @param data A 1D vector of numbers. Non-numerical values result in an error.
+#' @return A 2-element 1D vector indicating the start and end of the 95\% confidence interval.
 conf_int <- function (data){
-  #' This function takes in a vector and outputs the 95% confidence interval of the sample mean.
-  #'
-  #' @param data: a 1D vector of numbers. Non-numerical values result in an error.
-  #'
-  #' @return interval: a 2-element 1D vector indicating the start and end of the 95% confidence interval.
 
   # Check if input is empty
   if (length(data) == 0){
